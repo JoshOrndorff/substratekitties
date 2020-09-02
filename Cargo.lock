@@ -1283,9 +1283,9 @@ checksum = "4443176a9f2c162692bd3d352d745ef9413eec5782a80d8fd6f8a1ac692a07f7"
 
 [[package]]
 name = "fastrand"
-version = "1.3.4"
+version = "1.3.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4bd3bdaaf0a72155260a1c098989b60db1cbb22d6a628e64f16237aa4da93cc7"
+checksum = "5c85295147490b8fcf2ea3d104080a105a8b2c63f9c319e82c02d8e952388919"
 
 [[package]]
 name = "fdlimit"
@@ -2172,9 +2172,9 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
-version = "1.5.1"
+version = "1.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "86b45e59b16c76b11bf9738fd5d38879d3bd28ad292d7b313608becb17ae2df9"
+checksum = "4e47a3566dd4fd4eec714ae6ceabdee0caec795be835c223d92c2d40f1e8cf1c"
 dependencies = [
  "autocfg 1.0.1",
  "hashbrown 0.8.2",
@@ -3627,7 +3627,7 @@ dependencies = [
 [[package]]
 name = "pallet-commodities"
 version = "1.0.0-rc6"
-source = "git+https://github.com/danforbes/pallet-nft.git?tag=v1.0.0-rc6#b8c2e73595861627b04faf180137b2f884b31315"
+source = "git+https://github.com/JoshOrndorff/pallet-nft.git?branch=joshy-hack#eef928f91be995df7a7e6775b46f1cda1a66aab2"
 dependencies = [
  "frame-support",
  "frame-system",
@@ -4112,9 +4112,9 @@ checksum = "feb3b2b1033b8a60b4da6ee470325f887758c95d5320f52f9ce0df055a55940e"
 
 [[package]]
 name = "polling"
-version = "0.1.6"
+version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d10bd4578b2ca39fa2581c058921cb50ad226a8999829ba595e1665bcfdaf4a8"
+checksum = "53c5afb3e8bc82c2780a807374bda0fb8886904d8e9d51e6f4f3743fb1dd27fb"
 dependencies = [
  "cfg-if",
  "libc",
@@ -5961,9 +5961,9 @@ dependencies = [
 
 [[package]]
 name = "soketto"
-version = "0.4.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "85457366ae0c6ce56bf05a958aef14cd38513c236568618edbcd9a8c52cb80b0"
+checksum = "b5c71ed3d54db0a699f4948e1bb3e45b450fa31fe602621dee6680361d569c88"
 dependencies = [
  "base64 0.12.3",
  "bytes 0.5.6",
@@ -5972,7 +5972,7 @@ dependencies = [
  "httparse",
  "log",
  "rand 0.7.3",
- "sha-1 0.8.2",
+ "sha-1 0.9.1",
 ]
 
 [[package]]

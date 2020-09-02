@@ -31,9 +31,8 @@ version = '2.0.0-rc6'
 
 [dependencies.pallet-commodities]
 default-features = false
-git = 'https://github.com/danforbes/pallet-nft.git'
-tag = 'v1.0.0-rc6'
-version = '1.0.0-rc6'
+git = 'https://github.com/JoshOrndorff/pallet-nft.git'
+branch = 'joshy-hack'
 
 [dependencies.sp-core]
 default-features = false

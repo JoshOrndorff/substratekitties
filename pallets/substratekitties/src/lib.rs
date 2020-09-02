@@ -27,10 +27,11 @@ pub struct KittyInfo<Hash, Moment> {
 
 type BalanceOf<T> =
 	<<T as Trait>::Currency as Currency<<T as frame_system::Trait>::AccountId>>::Balance;
+type KittyInfoOf<T> = KittyInfo<<T as frame_system::Trait>::Hash, <<T as Trait>::Time as Time>::Moment>;
 
 pub trait Trait: frame_system::Trait {
-	type Kitty: pallet_commodities::nft::NFT;
-	type Kitties: pallet_commodities::nft::UniqueAssets<Self::Kitty>;
+	// type Kitty: pallet_commodities::nft::NFT;
+	type Kitties: pallet_commodities::nft::UniqueAssets<Self::AccountId, Info = KittyInfoOf<Self>>;
 	type Time: frame_support::traits::Time;
 	type Randomness: frame_support::traits::Randomness<Self::Hash>;
 	type Currency: frame_support::traits::LockableCurrency<Self::AccountId>;
@@ -46,6 +47,7 @@ decl_event!(
 
 decl_error! {
 	pub enum Error for Module<T: Trait> {
+		// A good event says _why_ the conjuring failed
 		KittyConjureFailure,
 	}
 }
@@ -66,7 +68,7 @@ decl_module! {
 			// ERROR: expected associated type pallet_commodities::NFT::Info, found struct KittyInfo<frame_system::Trait::Hash, frame_support::traits::Time::Moment>
 			T::Kitties::mint(&who, KittyInfo{dob: T::Time::now(), dna: T::Randomness::random(&MODULE_ID)});
 			Ok(())
-			
+
 			// TODO: DNA used to derive avatar https://www.peppercarrot.com/extras/html/2016_cat-generator/
 			// TODO: define an implicit mechanism for deriving a kitty's power from its DNA
 			// TODO: store variable kitty metadata (name, etc) in this pallet
